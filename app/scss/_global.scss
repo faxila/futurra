@@ -1,3 +1,8 @@
 body {
     min-height: 100vh;
+    @extend %roboto-400;
+    font-size: 20px;
+    line-height: 28px;
+    color: $default;
+    letter-spacing: 0.2px;
 }

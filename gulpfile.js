@@ -72,7 +72,7 @@ function scripts() {
     .pipe(concat('main.min.js'))                    //Конкатинация файлов
     .pipe(uglify())                                 //Минимизация файла
     .pipe(dest('app/js'))                           //Выгрузка файла
-    .pipe(browserSync.reload())                     //Перезагрузка браузера (для скриптов только перезагрузка)
+    .pipe(browserSync.stream())                     //Перезагрузка браузера (для скриптов только перезагрузка)
 }
 
 exports.styles = styles;
