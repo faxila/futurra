@@ -67,6 +67,9 @@ function watching() {
 function scripts() {
     return src([                                    //Подключение JS-файлов для проекта
         'node_modules/jquery/dist/jquery.js',
+        'app/js/jquery.fancybox.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/t-scroll/public/theme/js/t-scroll.min.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))                    //Конкатинация файлов

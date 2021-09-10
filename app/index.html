@@ -9,58 +9,269 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="header__inner col">
-                        <a class="logo" href="#">
-                            <img class="logo__img" src="images/logo.png" alt="logo">
+    <div class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="navbar__inner col">
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/logo.png" alt="logo">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Product</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="navbar__user-nav">
+                        <a class="navber__link" data-fancybox href="#popup">
+                            <button class="navbar__btn">Sign Up</button>
                         </a>
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">Home</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">Product</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">About</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <button class="header__btn">Sign Up</button>
+                        <button class="navbar__burger">
+                            <svg width="28" height="16" viewBox="0 0 28 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.666656 0H27.3333V2.66667H0.666656V0ZM7.33332 6.66667H27.3333V9.33333H7.33332V6.66667ZM15.6667 13.3333H27.3333V16H15.6667V13.3333Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <header class="header">
         <div class="header__content">
-            <div class="container">
-                <h2 class="header__title">
+            <div class="header__container container">
+                <h2 class="header__title title">
                     Lightning fast prototyping
                 </h2>
                 <p class="header__subtitle">
                     Most calendars are designed for teams. Slate is designed for
                     freelancers who want a simple way to plan their schedule.
                 </p>
-                <button class="header__content-btn">Try For Free</button>
-                <div class="header__content-items">
-                    <img class="header__content-img header__content-img--item1" src="images/header-item-1.png" alt="header image">
-                    <img class="header__content-img header__content-img--item2" src="images/header-item-2.png" alt="header image">
-                    <img class="header__content-img header__content-img--item3" src="images/header-item-3.png" alt="header image">
+                <a class="header__content-popup" data-fancybox href="#popup">
+                    <button class="header__content-btn">Try For Free</button>
+                </a>
+                <div class="popup" id="popup">
+                    <h2 class="popup__title title">Demonstration of the popup window</h2>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim
+                        vulputate eros.
+                    </p>
+                    <p class="popup__text">
+                        Donec hendrerit efficitur ex vitae euismod. Maecenas ut leo vitae ipsum dictum
+                        cursus vel vitae nulla.
+                    </p>
+                </div>
+                <div class="header__content-items t-default">
+                    <img class="header__content-img header__content-img--item1" src="images/header-item-1.png"
+                        alt="header image">
+                    <img class="header__content-img header__content-img--item2" src="images/header-item-2.png"
+                        alt="header image">
+                    <img class="header__content-img header__content-img--item3" src="images/header-item-3.png"
+                        alt="header image">
                 </div>
             </div>
         </div>
     </header>
+    <section class="slideshow">
+        <div class="container">
+            <h3 class="slideshow__title title t-default">
+                Fastest way to navigate
+            </h3>
+            <div class="slideshow__inner">
+                <div class="slideshow__item">
+                    <div class="slideshow__item-inners">
+                        <img class="slideshow__item-img" src="images/icons/pro.svg" alt="image icon">
+                        <div class="slideshow__item-inner">
+                            <h5 class="slideshow__item-title title t-default">
+                                Design with real
+                                data
+                            </h5>
+                            <p class="slideshow__item-text t-default">
+                                Ever wondered if you're too reliant
+                                on a client for work? Slate helps
+                                you identify .
+                            </p>
+                            <ul class="slideshow__list">
+                                <li class="slideshow__list-item">
+                                    <div class="slideshow__list-social">
+                                        <span class="slideshow__list-social-name">
+                                            Facebook
+                                        </span>
+                                        <span class="slideshow__list-social-num">
+                                            35,929
+                                        </span>
+                                    </div>
+                                    <div class="slideshow__list-progress">
+                                        <span class="slideshow__list-progress-line"
+                                            style="width: 130px; background-color: #2CD9C5;"></span>
+                                    </div>
+                                </li>
+                                <li class="slideshow__list-item">
+                                    <div class="slideshow__list-social">
+                                        <span class="slideshow__list-social-name">
+                                            Twitter
+                                        </span>
+                                        <span class="slideshow__list-social-num">
+                                            28,854
+                                        </span>
+                                    </div>
+                                    <div class="slideshow__list-progress">
+                                        <span class="slideshow__list-progress-line"
+                                            style="width: 50px; background-color: #2D99FF;"></span>
+                                    </div>
+                                </li>
+                                <li class="slideshow__list-item">
+                                    <div class="slideshow__list-social">
+                                        <span class="slideshow__list-social-name">
+                                            Behance
+                                        </span>
+                                        <span class="slideshow__list-social-num">
+                                            1,843
+                                        </span>
+                                    </div>
+                                    <div class="slideshow__list-progress">
+                                        <span class="slideshow__list-progress-line"
+                                            style="width: 200px; background-color: #826AF9;"></span>
+                                    </div>
+                                </li>
+                                <li class="slideshow__list-item">
+                                    <div class="slideshow__list-social">
+                                        <span class="slideshow__list-social-name">
+                                            Instagram
+                                        </span>
+                                        <span class="slideshow__list-social-num">
+                                            49,943
+                                        </span>
+                                    </div>
+                                    <div class="slideshow__list-progress">
+                                        <span class="slideshow__list-progress-line"
+                                            style="width: 25px; background-color: #FFE700;"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideshow__item slideshow__item--work">
+                    <div class="slideshow__item-inners">
+                        <img class="slideshow__item-img" src="images/icons/window.svg" alt="image icon">
+                        <div class="slideshow__item-inner">
+                            <h5 class="slideshow__item-title title t-default">
+                                Work at the speed
+                                of thought.
+                            </h5>
+                            <p class="slideshow__item-text t-default">
+                                Ever wondered if you're too reliant
+                                on a client for work? Slate helps
+                                you identify .
+                            </p>
+                            <div class="slideshow__item-procents">
+                                <p class="slideshow__item-procents-num">
+                                    $73,994
+                                </p>
+                                <p class="slideshow__item-procents-name">
+                                    Facebook
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="slideshow__link" data-fancybox href="#popup">
+                <button class="slideshow__btn">Try For Free</button>
+            </a>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <div class="features__inner row">
+                <div class="col-lg-12 col-xl-6">
+                    <div class="features__info">
+                        <h3 class="features__title title t-default">
+                            OpenType features and
+                            Variable fonts
+                        </h3>
+                        <p class="features__text">
+                            Most calendars are designed for teams. Slate is designed
+                            for freelancers who want a simple way to plan
+                            their schedule.
+                        </p>
+                        <form class="features__form">
+                            <input type="email" class="features__email" placeholder="Enter Your Adress Email" required>
+                            <button class="features__btn" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-6">
+                    <img class="features__img" src="images/phone.png" alt="phone">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="call-to-actions">
+        <div class="container">
+            <h3 class="call-to-actions__title title t-default">
+                Work better together
+            </h3>
+            <p class="call-to-actions__subtitle">
+                Being a freelancer is a rollercoaster of emotions. We built Slate to keep your
+                freelance business less stressful. We'd love to show you what we're building...
+            </p>
+            <div class="call-to-actions__progress">
+                <div class="call-to-actions__progress-body">
+                    <div class="call-to-actions__progress-line" style="width: 50%;"></div>
+                </div>
+                <div class="call-to-actions__social">
+                    <span class="call-to-actions__social-name">Facebook</span>
+                    <span class="call-to-actions__social-num">35,929</span>
+                </div>
+            </div>
+            <a class="call-to-actions__link" data-fancybox href="#popup">
+                <button class="call-to-actions__btn">Try For Free</button>
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__inner">
+                <a class="logo" href="#">
+                    <img class="footer__img logo__img" src="images/logo-white.png" alt="logo">
+                </a>
+                <div class="footer__social">
+                    <a class="footer__link" href="#">
+                        <i class="footer__icon fab fa-twitter"></i>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <i class="footer__icon fab fa-facebook-square"></i>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <i class="footer__icon fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <span class="footer__copy">
+                    Just type what's on your mind and we'll
+                </span>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.min.js"></script>
 </body>
